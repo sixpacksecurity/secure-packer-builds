@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image 'hashicorp/packer:latest'
+            args "--entrypoint=''
         }
     }
     environment {
@@ -16,7 +17,7 @@ pipeline {
     stages {
         stage('Initialize and Build') {
             steps {
-                sh 'init . && packer build .'
+                sh 'pwd && ls && packer init . && packer build .'
             }
         }
     }
