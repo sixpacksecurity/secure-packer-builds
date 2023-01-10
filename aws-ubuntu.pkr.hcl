@@ -32,8 +32,6 @@ build {
     environment_vars = [
       "FOO=hello world",
     ]
-    inline = [
-      "install-inspector-agent.sh"
-    ]
+    script = "install-inspector-agent.sh"
   }
 }
