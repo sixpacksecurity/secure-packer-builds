@@ -1,5 +1,7 @@
-echo "*******Installing AWS Inspector Agent********"
-curl -o "/tmp/inspector_install" https://inspector-agent.amazonaws.com/linux/latest/install
-sudo bash /tmp/inspector_install
-sudo /etc/init.d/awsagent start
-rm -rf /tmp/inspector_install
+echo "*******Installing AWS SSM Agent********"
+mkdir /tmp/ssm
+cd /tmp/ssm
+wget https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/debian_amd64/amazon-ssm-agent.deb
+sudo dpkg -i amazon-ssm-agent.deb
+sudo systemctl status amazon-ssm-agent
+echo "******* Done !!! ********"
