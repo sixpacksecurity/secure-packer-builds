@@ -28,4 +28,12 @@ build {
   sources = [
     "source.amazon-ebs.ubuntu"
   ]
+  provisioner "shell" {
+    environment_vars = [
+      "FOO=hello world",
+    ]
+    inline = [
+      "/bin/bash install-inspector-agent.sh"
+    ]
+  }
 }
