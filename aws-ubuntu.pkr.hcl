@@ -33,7 +33,7 @@ build {
       "FOO=hello world",
     ]
     inline = [
-      "./install-inspector-agent.sh"
+      "install-inspector-agent.sh"
     ]
   }
 }
