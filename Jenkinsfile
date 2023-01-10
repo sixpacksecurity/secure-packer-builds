@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'hashicorp/packer:latest'
-            args "--entrypoint=''
+            args "--entrypoint=''"
         }
     }
     environment {
